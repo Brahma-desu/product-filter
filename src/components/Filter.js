@@ -24,7 +24,7 @@ function Filter({ filters, setFilters }) {
                 <Navbar.Toggle />
                 <div>
                     <label>Category:</label>
-                    <select onChange={handleCategoryChange}>
+                    <select onChange={handleCategoryChange} value={filters.category}>
                         <option value="">All</option>
                         <option value="Electronics">Electronics</option>
                         <option value="Clothing">Clothing</option>
@@ -33,11 +33,11 @@ function Filter({ filters, setFilters }) {
                 </div>
                 <div>
                     <label>Price Range:</label>
-                    <input type="number" onChange={handlePriceChange} />
+                    <input type="number" onChange={handlePriceChange} value={filters.price} />
                 </div>
                 <div>
                     <label>Rating:</label>
-                    <select onChange={handleRatingChange}>
+                    <select onChange={handleRatingChange} value={filters.rating}>
                         <option value="">All</option>
                         <option value="2">2+</option>
                         <option value="3">3+</option>
